@@ -13,3 +13,13 @@ A real-time chat application built with **Socket.IO** for the backend and **Reac
 - 🔔 Join/leave notifications
 
 **Tech Stack:** Node.js, Express, Socket.IO, React, Vite
+
+### [Task-2: Weather Application](./Task-2/)
+A responsive web app that fetches and displays weather data using the **OpenWeatherMap API**.
+
+- 🔍 Search weather by city name
+- 🌡️ Current weather conditions
+- 📅 5-day weather forecast
+- 📱 Fully responsive design
+
+**Tech Stack:** React, Vite, OpenWeatherMap API

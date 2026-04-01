@@ -1,0 +1,68 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e5ec 0%, #f5f7fa 100%);
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+header p {
+  margin: 10px 0 0 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #fecaca;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.placeholder p {
+  margin: 0;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 500px) {
+  .app {
+    padding: 20px 15px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+}
