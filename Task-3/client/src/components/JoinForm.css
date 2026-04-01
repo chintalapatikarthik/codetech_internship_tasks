@@ -1,0 +1,69 @@
+.join-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.join-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+}
+
+.join-card h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+.join-card p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.join-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.join-card input {
+  padding: 15px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.join-card input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.join-card button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.join-card button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.join-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

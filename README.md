@@ -23,3 +23,13 @@ A responsive web app that fetches and displays weather data using the **OpenWeat
 - 📱 Fully responsive design
 
 **Tech Stack:** React, Vite, OpenWeatherMap API
+
+### [Task-3: Collaborative Whiteboard](./Task-3/)
+A real-time collaboration tool where multiple users can draw together on a shared whiteboard.
+
+- 🎨 Real-time collaborative drawing
+- 👥 Multi-user support with live cursors
+- ✏️ Pen and eraser tools
+- 🎨 Customizable colors and brush sizes
+
+**Tech Stack:** Node.js, Socket.IO, React, Canvas API
