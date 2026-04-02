@@ -216,3 +216,18 @@ canvas {
     padding: 10px;
   }
 }
+
+.connection-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.connection-status.connected {
+  color: #90EE90;
+}
+
+.connection-status.disconnected {
+  color: #FFB6C1;
+}

@@ -10,6 +10,7 @@ function Whiteboard({ username, onLeave }) {
   const [tool, setTool] = useState('pen');
   const [users, setUsers] = useState([]);
   const [cursors, setCursors] = useState({});
+  const [connected, setConnected] = useState(false);
   const lastPos = useRef({ x: 0, y: 0 });
 
   const colors = ['#000000', '#e74c3c', '#3498db', '#2ecc71', '#9b59b6', '#f39c12', '#1abc9c', '#e91e63'];
@@ -107,6 +108,17 @@ function Whiteboard({ username, onLeave }) {
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    // Socket connection events
+    socket.on('connect', () => {
+      console.log('Connected to server!');
+      setConnected(true);
+    });
+
+    socket.on('connect_error', (err) => {
+      console.error('Connection error:', err.message);
+      setConnected(false);
+    });
+
     // Socket event listeners
     socket.on('draw', (data) => {
       drawLine(data.x1, data.y1, data.x2, data.y2, data.color, data.brushSize, data.isEraser);
@@ -146,6 +158,8 @@ function Whiteboard({ username, onLeave }) {
     });
 
     return () => {
+      socket.off('connect');
+      socket.off('connect_error');
       socket.off('draw');
       socket.off('loadHistory');
       socket.off('clearCanvas');
@@ -166,6 +180,9 @@ function Whiteboard({ username, onLeave }) {
         <div className="header-left">
           <h2>🎨 Collaborative Whiteboard</h2>
           <span className="user-badge">{username}</span>
+          <span className={`connection-status ${connected ? 'connected' : 'disconnected'}`}>
+            {connected ? '🟢 Connected' : '🔴 Disconnected'}
+          </span>
         </div>
         <div className="header-right">
           <div className="users-online">
